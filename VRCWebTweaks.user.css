@@ -501,6 +501,7 @@ if cursorEnable{
 	}
 	.postListContainer, .postList, .postList .loading, .boardHome .postListContainer{
 		background: var(--moreDarkGrey);
+        border: 1px solid var(--moreDarkGreenBorder);
 		border-radius: 10px;
 	}
 	.postListMenu .menu .selector .dropdown .categories .option:hover, .postListMenu .menu .selector .dropdown .filters .option:hover, .postListMenu .menu .selector .dropdown .sorts .option:hover{
@@ -527,6 +528,9 @@ if cursorEnable{
 	.postList .topContainer .postListMenu{
 		margin: 0;
 	}
+    .postListMenu {
+        background: var(--lessDarkGrey)
+    }
 	.postListMenu .menu{
 		padding: 15px 25px 15px 25px;
 	}
@@ -597,8 +601,61 @@ if cursorEnable{
 	.postVotes .upvote.voted{
 		border-bottom: 9px solid accentColor !important;
 	}
-	
-	
+
+/*
+
+██████╗  ██████╗ ███████╗████████╗    ██╗     ██╗███████╗████████╗
+██╔══██╗██╔═══██╗██╔════╝╚══██╔══╝    ██║     ██║██╔════╝╚══██╔══╝
+██████╔╝██║   ██║███████╗   ██║       ██║     ██║███████╗   ██║
+██╔═══╝ ██║   ██║╚════██║   ██║       ██║     ██║╚════██║   ██║
+██║     ╚██████╔╝███████║   ██║       ███████╗██║███████║   ██║
+╚═╝      ╚═════╝ ╚══════╝   ╚═╝       ╚══════╝╚═╝╚══════╝   ╚═╝ v2
+
+I don't know CSS and I'm just doing this to make the posts section readable until someone can properly fix - ZenithVal */
+
+.postListItemV2 {
+    color: var(--fauxWhite);
+}
+.postListItemV2 .postListItemBody .postDetails {
+    color: var(--fauxWhite);
+}
+html.lightTheme .postListItemV2:hover {
+    border-bottom: 0;
+    background-color: var(--moreDarkGreenBorder);
+}
+.postListItemV2 .postListItemBody .metaInfo .count {
+    color: var(--fauxWhite);
+}
+.postListItemV2 .postListItemBody .metaInfo .lucide-message-square {
+    color: var(--blueText);
+}
+
+
+.postVotesV2 {
+    border: 1px solid var(--moreDarkGreenBorder);
+}
+.postVotesV2.hovering {
+    border: 1px solid var(--blueText);
+}
+.postVotesV2 .background {
+    background-color: var(--moreDarkGreen);
+}	
+.postVotesV2.hovering .background {
+    background-color: var(--moreDarkGreen);
+}	
+html.lightTheme .postVotesV2.highlight .background {
+    background-color: var(--moreDarkGreen);
+}
+html.lightTheme .postVotesV2.highlight.hovering .background {
+    background-color: var(--moreDarkGreen) !important;
+}
+.postVotesV2 .chevron {
+    color: var(--fauxWhite);
+}
+.postVotesV2 .score {
+    color: var(--fauxWhite);
+}
+
 /*
 
   ▄▄█▀▀▀▄█                           ▄              ▀██▀▀█▄                   ▄
@@ -1024,7 +1081,7 @@ if cursorEnable{
 	}
 	.dropdownContainer button{
 		background: var(--moreDarkGreen);
-		border: 2px solid var(--moreDarkGreenBorder)
+		border: 2px solid var(--moreDarkGreenBorder);
 		color: var(--fauxWhite);
 	}
 	.dropdownContainer button div{
